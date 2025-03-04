@@ -7,7 +7,10 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "prettier-write": "prettier --write .",
+    "format": "npm run lint --fix && npm run prettier-write",
+    "check": "npm run lint  && npm run prettier"
   },
   "dependencies": {
     "react": "19.0.0",
@@ -27,9 +30,14 @@
     "@types/jest": "^29.5.13",
     "@types/react": "^19.0.0",
     "@types/react-test-renderer": "^19.0.0",
+    "babel-plugin-module-resolver": "^5.0.2",
     "eslint": "^8.19.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-module-resolver": "^1.5.0",
+    "eslint-plugin-prettier": "^5.2.3",
     "jest": "^29.6.3",
-    "prettier": "2.8.8",
+    "prettier": "3.5.3",
     "react-test-renderer": "19.0.0",
     "typescript": "5.0.4"
   },
