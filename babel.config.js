@@ -10,7 +10,7 @@ module.exports = {
           '@navigation': './src/navigation',
           '@screens': './src/screens',
           '@services': './src/services',
-          '@types': './src/types',
+          '@typings': './src/typings',
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },

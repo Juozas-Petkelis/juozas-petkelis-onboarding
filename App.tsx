@@ -1,11 +1,12 @@
+import { RootNavigator } from '@navigation/RootNavigator';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 function App(): React.JSX.Element {
   return (
-    <View style={{ backgroundColor: 'red' }}>
-      <Text>Initial screen </Text>
-    </View>
+    <SafeAreaProvider>
+      <RootNavigator />
+    </SafeAreaProvider>
   );
 }
 

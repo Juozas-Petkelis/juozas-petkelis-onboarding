@@ -7,7 +7,7 @@
       "@navigation/*": ["navigation/*"],
       "@screens/*": ["screens/*"],
       "@services/*": ["services/*"],
-      "@types/*": ["types/*"]
+      "@typings/*": ["typings/*"]
     }
   }
 }
