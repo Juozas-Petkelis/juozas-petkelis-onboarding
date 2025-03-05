@@ -1,9 +1,8 @@
 const weatherApiVersion = 2.5;
 export const weatherBaseUrl = `https://api.openweathermap.org/data/${weatherApiVersion}`;
 
-export const weatherUrls = {
+export const weatherUrl = {
   list: 'group',
-  details: 'weather',
 };
 
 export const weatherIconUrl = (iconId: string) =>
