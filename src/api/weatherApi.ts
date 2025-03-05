@@ -5,7 +5,7 @@ import { CITIES_GEO_IDS } from 'constants/geoLocations';
 import { weatherBaseUrl, weatherUrls } from 'constants/weatherConstants';
 import Config from 'react-native-config';
 
-const apiClientInstance = axios.create({
+const weatherApi = axios.create({
   baseURL: weatherBaseUrl,
   params: {
     appId: Config.OPEN_WEATHER_API_KEY,
@@ -27,7 +27,7 @@ export const weatherQueries = {
 
 const fetchWeatherList = async () => {
   try {
-    const response = await apiClientInstance.get<WeatherListResponse>(
+    const response = await weatherApi.get<WeatherListResponse>(
       weatherUrls.list,
       {
         params: {

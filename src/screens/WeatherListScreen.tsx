@@ -20,6 +20,7 @@ export const WeatherListScreen = () => {
         keyExtractor={keyExtractor}
         renderItem={renderWeatherListRow}
         contentContainerStyle={styles.listContainer}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );
