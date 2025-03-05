@@ -5,3 +5,6 @@ export const weatherUrls = {
   list: 'group',
   details: 'weather',
 };
+
+export const weatherIconUrl = (iconId: string) =>
+  `https://openweathermap.org/img/wn/${iconId}.png`;

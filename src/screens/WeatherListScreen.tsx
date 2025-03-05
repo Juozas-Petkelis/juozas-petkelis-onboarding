@@ -11,6 +11,7 @@ export const WeatherListScreen = () => {
   const renderWeatherListRow = ({ item }: { item: WeatherData }) => (
     <WeatherListItem weatherData={item} />
   );
+  const renderSeparator = () => <View style={styles.separator} />;
   const keyExtractor = (item: WeatherData) => `${item.id}`;
 
   return (
@@ -21,6 +22,8 @@ export const WeatherListScreen = () => {
         renderItem={renderWeatherListRow}
         contentContainerStyle={styles.listContainer}
         showsVerticalScrollIndicator={false}
+        ItemSeparatorComponent={renderSeparator}
+        ListFooterComponent={renderSeparator}
       />
     </View>
   );
@@ -29,9 +32,13 @@ export const WeatherListScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 24,
+    backgroundColor: 'white',
   },
   listContainer: {
     gap: 8,
+  },
+  separator: {
+    height: 1,
+    backgroundColor: 'lightgrey',
   },
 });
