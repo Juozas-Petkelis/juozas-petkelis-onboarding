@@ -11,6 +11,9 @@ export const RootNavigator = () => {
     <NavigationContainer>
       <RootStack.Navigator>
         <RootStack.Screen
+          options={{
+            title: 'Weather',
+          }}
           name={Screens.WeatherList}
           component={WeatherListScreen}
         />
