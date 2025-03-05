@@ -1,3 +1,3 @@
 export enum Screens {
-    WeatherList = 'WeatherList'
+  WeatherList = 'WeatherList',
 }
