@@ -37,7 +37,7 @@ const fetchWeatherList = async () => {
     );
 
     return response.data;
-  } catch (error) {
+  } catch {
     //TODO error handling
   }
 };

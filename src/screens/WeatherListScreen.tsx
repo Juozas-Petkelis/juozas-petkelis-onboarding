@@ -11,7 +11,7 @@ export const WeatherListScreen = () => {
   const renderWeatherListRow = ({ item }: { item: WeatherData }) => (
     <WeatherListItem weatherData={item} />
   );
-  const keyExtractor = (item: WeatherData, index: number) => `${item.id}`;
+  const keyExtractor = (item: WeatherData) => `${item.id}`;
 
   return (
     <View style={styles.container}>

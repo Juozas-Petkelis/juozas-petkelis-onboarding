@@ -11,7 +11,8 @@ module.exports = {
   rules: {
     'module-resolver/use-alias': 2,
     'prettier/prettier': ['error'],
-    'import/no-unresolved': 'warn',
+    'import/no-unresolved': 'off',
+    'import/no-named-as-default': 'off',
     'import/named': 'error',
     'import/default': 'error',
     'import/namespace': 'off',
@@ -27,5 +28,4 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'unused-imports/no-unused-imports': 'error',
   },
-  o,
 };

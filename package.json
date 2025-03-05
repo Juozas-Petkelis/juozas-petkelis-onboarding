@@ -9,8 +9,9 @@
     "start": "react-native start",
     "test": "jest",
     "prettier-write": "prettier --write .",
+    "prettier-check": "prettier --check .",
     "format": "npm run lint --fix && npm run prettier-write",
-    "check": "npm run lint  && npm run prettier"
+    "check": "npm run lint && npm run prettier-check"
   },
   "dependencies": {
     "@react-navigation/native": "^7.0.15",
