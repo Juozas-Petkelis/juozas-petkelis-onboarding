@@ -28,4 +28,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'unused-imports/no-unused-imports': 'error',
   },
+  settings: {
+    'import/ignore': ['react-navigation'],
+  },
 };
