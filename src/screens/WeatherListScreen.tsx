@@ -1,34 +1,20 @@
-import { weatherQueries } from '@api/weatherApi';
-import { WeatherHeader } from '@components/WeatherHeader';
-import { useNavigation } from '@react-navigation/native';
-import { useQuery } from '@tanstack/react-query';
-import { Screens } from '@typings/navigation.types';
-import { WeatherData } from '@typings/weatherTypes';
+import { WeatherList } from '@components/WeatherList';
+import { WeatherListError } from '@components/WeatherListError';
+import { QueryErrorResetBoundary } from '@tanstack/react-query';
 import React from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { ErrorBoundary } from 'react-error-boundary';
+import { StyleSheet, View } from 'react-native';
 
 export const WeatherListScreen = () => {
-  const { data: weatherList } = useQuery(weatherQueries.weatherList());
-  const { navigate } = useNavigation();
-
-  const onWeatherDetailsPress = (weatherData: WeatherData) => () => {
-    navigate(Screens.WeatherDetails, { weatherData });
-  };
-
-  const renderWeatherListRow = ({ item }: { item: WeatherData }) => (
-    <WeatherHeader weatherData={item} onPress={onWeatherDetailsPress(item)} />
-  );
-  const keyExtractor = (item: WeatherData) => `${item.id}`;
-
   return (
     <View style={styles.container}>
-      <FlatList
-        data={weatherList?.list}
-        keyExtractor={keyExtractor}
-        renderItem={renderWeatherListRow}
-        contentContainerStyle={styles.listContainer}
-        showsVerticalScrollIndicator={false}
-      />
+      <QueryErrorResetBoundary>
+        {({ reset }) => (
+          <ErrorBoundary onReset={reset} FallbackComponent={WeatherListError}>
+            <WeatherList />
+          </ErrorBoundary>
+        )}
+      </QueryErrorResetBoundary>
     </View>
   );
 };

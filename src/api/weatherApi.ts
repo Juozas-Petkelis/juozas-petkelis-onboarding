@@ -26,18 +26,11 @@ export const weatherQueries = {
 };
 
 const fetchWeatherList = async () => {
-  try {
-    const response = await weatherApi.get<WeatherListResponse>(
-      weatherUrl.list,
-      {
-        params: {
-          id: CITIES_GEO_IDS.join(','),
-        },
-      }
-    );
+  const response = await weatherApi.get<WeatherListResponse>(weatherUrl.list, {
+    params: {
+      id: CITIES_GEO_IDS.join(','),
+    },
+  });
 
-    return response.data;
-  } catch {
-    //TODO error handling
-  }
+  return response.data;
 };
