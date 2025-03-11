@@ -27,6 +27,7 @@ export const WeatherList = () => {
     <QueryErrorResetBoundary>
       {({ reset }) => (
         <ErrorBoundary onReset={reset} FallbackComponent={WeatherListError}>
+          <VIew
           <FlatList
             testID="WeatherList_Id"
             data={weatherList?.list}
