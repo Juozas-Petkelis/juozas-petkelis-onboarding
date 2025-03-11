@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
-import { WeatherListResponse } from '@typings/weatherTypes';
+import type { WeatherListResponse } from '@typings/weatherTypes';
 import axios from 'axios';
 import { CITIES_GEO_IDS } from 'constants/geoLocations';
 import { weatherBaseUrl, weatherUrl } from 'constants/weatherConstants';

@@ -1,6 +1,6 @@
-import { RouteProp } from '@react-navigation/native';
+import type { RouteProp } from '@react-navigation/native';
 
-import { WeatherData } from './weatherTypes';
+import type { WeatherData } from './weatherTypes';
 
 export const enum Screens {
   WeatherList = 'WeatherList',

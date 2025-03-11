@@ -24,14 +24,10 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
-    'import/no-extraneous-dependencies': 'warn',
+    'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'unused-imports/no-unused-imports': 'error',
     'react-hooks/exhaustive-deps': 'off',
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      { prefer: 'type-imports' },
-    ],
   },
   settings: {
     'import/ignore': ['react-navigation'],

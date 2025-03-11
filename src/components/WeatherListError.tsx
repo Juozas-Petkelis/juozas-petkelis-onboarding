@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export const WeatherListError = ({ resetErrorBoundary }: FallbackProps) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="WeatherListError_Id">
       <Text style={styles.header}>
         Wooops! Something went wrong! Refresh to try it again
       </Text>

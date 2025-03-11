@@ -1,7 +1,7 @@
 import { InfoRow } from '@components/InfoRow';
 import { WeatherHeader } from '@components/WeatherHeader';
 import { useRoute } from '@react-navigation/native';
-import { Screens, TypedRoute } from '@typings/navigation.types';
+import type { Screens, TypedRoute } from '@typings/navigation.types';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 

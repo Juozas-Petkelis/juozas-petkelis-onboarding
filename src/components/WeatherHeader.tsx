@@ -13,6 +13,7 @@ export const WeatherHeader = ({ weatherData, onPress }: Props) => {
 
   return (
     <TouchableOpacity
+      testID={`WeatherHeader_Id`}
       disabled={!onPress}
       onPress={onPress}
       style={styles.container}
